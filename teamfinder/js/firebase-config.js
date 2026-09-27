@@ -1,15 +1,10 @@
-// Вставь сюда конфиг своего проекта из Firebase Console:
-// Project settings → General → "Your apps" → Web app → SDK setup and configuration
-//
-// Инструкция по получению этих значений — в README.md
-
 const firebaseConfig = {
-  apiKey: "ВСТАВЬ_СЮДА",
-  authDomain: "ВСТАВЬ_СЮДА.firebaseapp.com",
-  projectId: "ВСТАВЬ_СЮДА",
-  storageBucket: "ВСТАВЬ_СЮДА.appspot.com",
-  messagingSenderId: "ВСТАВЬ_СЮДА",
-  appId: "ВСТАВЬ_СЮДА"
+  apiKey: "AIzaSyCXTbIn-a2IFpxSxHXOyNDs7_KdnEKOLZQ",
+  authDomain: "team-1169b.firebaseapp.com",
+  projectId: "team-1169b",
+  storageBucket: "team-1169b.firebasestorage.app",
+  messagingSenderId: "972412804809",
+  appId: "1:972412804809:web:60f269c3f993795ed6f718"
 };
 
 firebase.initializeApp(firebaseConfig);
