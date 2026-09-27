@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подать заявку — ROSTER</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"></span>ROSTER</div>
+    <div class="nav-links"><a href="index.html">На главную</a></div>
+  </div>
+</nav>
+
+<section class="form-page wrap">
+  <h1>Заявка на участие</h1>
+  <p class="lead">Заполни поля ниже — организатор увидит заявку в своём кабинете и свяжется с тобой.</p>
+
+  <div class="status-msg" id="statusMsg"></div>
+
+  <form id="applyForm">
+    <div class="field-row">
+      <div class="field">
+        <label for="nick">Игровой ник *</label>
+        <input type="text" id="nick" required maxlength="40">
+      </div>
+      <div class="field">
+        <label for="game">Игра *</label>
+        <input type="text" id="game" required maxlength="40" placeholder="Например: Valorant">
+      </div>
+    </div>
+
+    <div class="field-row">
+      <div class="field">
+        <label for="rank">Ранг / уровень *</label>
+        <input type="text" id="rank" required maxlength="40">
+      </div>
+      <div class="field">
+        <label for="role">Роль в составе *</label>
+        <input type="text" id="role" required maxlength="40" placeholder="Например: саппорт, IGL">
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="contact">Discord или Telegram для связи *</label>
+      <input type="text" id="contact" required maxlength="60" placeholder="username#0000 или @username">
+    </div>
+
+    <div class="field">
+      <label for="about">О себе</label>
+      <textarea id="about" maxlength="600" placeholder="Опыт, наигранные часы, доступное время для тренировок и т.д."></textarea>
+      <div class="hint">До 600 символов</div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" id="submitBtn">Отправить заявку</button>
+  </form>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%">
+    <span>ROSTER</span>
+    <a href="admin.html">Кабинет организатора</a>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/apply.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Кабинет организатора — ROSTER</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="brand"><span class="brand-mark"></span>ROSTER</div>
+    <div class="nav-links">
+      <a href="index.html">На главную</a>
+      <a href="#" id="logoutLink" style="display:none">Выйти</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Login -->
+<div class="login-box" id="loginBox">
+  <h1>Вход организатора</h1>
+  <div class="status-msg" id="loginMsg"></div>
+  <div class="field">
+    <label for="email">Email</label>
+    <input type="email" id="email">
+  </div>
+  <div class="field">
+    <label for="password">Пароль</label>
+    <input type="password" id="password">
+  </div>
+  <button class="btn btn-primary" id="loginBtn" style="width:100%">Войти</button>
+</div>
+
+<!-- Admin panel -->
+<section class="admin-page wrap" id="adminPanel" style="display:none">
+  <div class="admin-head">
+    <h1>Заявки игроков</h1>
+  </div>
+  <div class="tabs">
+    <div class="tab active" data-filter="pending">На рассмотрении</div>
+    <div class="tab" data-filter="approved">Приняты</div>
+    <div class="tab" data-filter="rejected">Отклонены</div>
+    <div class="tab" data-filter="all">Все</div>
+  </div>
+  <div id="appsList"></div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;justify-content:space-between;width:100%">
+    <span>ROSTER</span>
+    <span>Кабинет организатора</span>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
